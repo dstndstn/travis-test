@@ -1,0 +1,14 @@
+# Travis-CI.org build script
+
+sudo: required
+
+language: c
+compiler:
+  - gcc
+  - clang
+
+script:
+    - $CC --version
+    - $CC -O3 -march=native -c test1.c
+    - $CC -O3 -march=native -c test2.c
+
